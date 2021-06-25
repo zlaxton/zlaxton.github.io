@@ -36,7 +36,7 @@ body {
   /* Sets the line-height to 1.6 */
   background-color: var(--body-background-color);
 }
-
+ 
 * {
   box-sizing: border-box;
 }
