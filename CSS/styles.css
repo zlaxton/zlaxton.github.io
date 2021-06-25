@@ -1,16 +1,30 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
+:root {
+  --body-background-color: #f5f241;
+  --grid__item-background-color: lightgray;
+  --grid-background-color: rgba(255, 255, 255, 0.8);
+  --button-background-color: black;
+  --button-color: #EBEBEB;
+  --button__secondary-background-color: #faae09;
+  --button__secondary-color: #ad155c;
+  --a-link-color: red;
+  --a-visited-color: green;
+  --a-hover-color: greenyellow;
+  --a-active-color: yellow;
+  --my-link-id-color: darkblue;
+  --my-link-hover-focus: cyan;
+  --my-link-class-color: blue;
+  --fity-percent: 50%;
+  --ten-pixels: 10px;
+  --twentypx: 20px;
+  --m-width: width(50%);
+}
 
 body {
   font-family: 'Lato', sans-serif;
@@ -19,11 +33,10 @@ body {
   /* Sets the font size to 16px */
   line-height: 1.6;
   /* Sets the line-height to 1.6 */
-  background-color: #f5f241;
+  background-color: var(--body-background-color);
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -58,64 +71,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
 }
 
 .grid {
-  font-size: 20px;
+  font-size: var(--twentypx);
 }
 
 .grid__item {
-  background-color: lightgray;
+  background-color: var(--grid__item-background-color);
   width: auto;
   min-height: auto;
   margin: 0;
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 10px 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
-  padding: 10px;
-}
-
-.grid>*:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-
-.grid>*:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-
-.grid>*:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-}
-
-.grid>*:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-
-.grid>*:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-}
-
-.grid>*:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
+  grid-gap: var(--ten-pixels);
+  padding: var(--ten-pixels);
 }
 
 ​ .grid {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--grid-background-color);
   border: 1px solid black;
   text-align: center;
   font-size: 0.1px;
@@ -123,7 +102,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 #logo {
   position: relative;
-  top: 20px;
+  top: var(--twentypx);
   left: 100px;
 }
 
@@ -136,26 +115,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   float: left;
   width: 300px;
   margin-right: 50px;
-  border-radius: 50%;
+  border-radius: var(--fity-percent);
 }
 
 .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: var(--twentypx);
 }
 
 .page-header__item {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
   flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: right;
 }
@@ -181,44 +154,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 100%;
   text-align: center;
   display: flexbox;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
 }
 
 .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
 .flex-item {
-  -webkit-box-flex: 0;
-  -ms-flex: none;
   flex: none;
-  -ms-flex-item-align: auto;
-  -ms-grid-row-align: auto;
   align-self: auto;
   margin: 0px 5px 0px 5px;
 }
 
 .menu {
-  font-size: 20px;
+  font-size: var(--twentypx);
   margin-right: 70px;
-  margin-top: 20px;
+  margin-top: var(--twentypx);
   color: white;
 }
 
@@ -240,17 +196,12 @@ table {
   border-spacing: 0;
 }
 
-button {
-  background-color: black;
-  color: #EBEBEB;
+button, .button {
+  background-color: var(--button-background-color);
+  color: var(--button-color);
 }
 
-.button {
-  background-color: black;
-  color: #EBEBEB;
-}
-
-.button {
+.button, button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
@@ -260,37 +211,11 @@ button {
   /*background-color: #357b70;*/
   /*color: white;*/
   text-decoration: none;
-  padding: 10px;
+  padding: var(--ten-pixels);
   border-radius: 3px;
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-}
-
-button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the button */
-  /*background-color: #357b70;*/
-  /*color: white;*/
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -301,7 +226,7 @@ button:hover, button:focus {
   opacity: 0.8;
 }
 
-.button {
+.button, button {
   /* overwrites browser defaults */
   /* resets the border */
   border: none;
@@ -312,32 +237,10 @@ button:hover, button:focus {
   background-color: #357b70;
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: var(--ten-pixels);
   border-radius: 3px;
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
-  transition: 0.2s opacity;
-}
-
-button {
-  /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* style button */
-  background-color: #357b70;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
   transition: 0.2s opacity;
 }
 
@@ -349,31 +252,29 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .button__secondary {
-  background-color: #faae09;
-  color: #ad155c;
+  background-color: var(--button__secondary-background-color);
+  color: var(--button__secondary-color);
 }
 
 a:link {
-  color: red;
+  color: var(--a-link-color);
 }
 
 a:visited {
-  color: green;
+  color: var(--a-visited-color);
 }
 
 a:hover {
-  color: greenyellow;
+  color: var(--a-hover-color);
 }
 
 a:active {
-  color: yellow;
+  color: var(--a-active-color);
 }
 
 #my-link {
   /* id selector */
-  color: darkblue;
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
+  color: var(--my-link-id-color);
   transition: all 0.2s linear;
 }
 
@@ -396,7 +297,7 @@ button {
   color: rgb(255, 0, 0);
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
-  padding: 10px;
+  padding: var(--ten-pixels);
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
@@ -418,20 +319,20 @@ button {
 }
 
 #about {
-  width: 50%;
-  margin: 0px auto 20px auto;
+  width: var(--fity-percent);
+  margin: 0px auto var(--twentypx) auto;
   position: static;
   text-align: center;
 }
 
 #developer {
-  width: 50%;
-  margin: 0px auto 20px auto;
+  width: var(--fity-percent);
+  margin: 0px auto var(--twentypx) auto;
   text-align: center;
 }
 
 #guitar {
-  width: 50%;
+  width: var(--fity-percent);
   margin: 0px auto 0px auto;
   text-align: center;
 }
@@ -455,51 +356,27 @@ button {
 }
 
 .sun {
-  -webkit-animation-duration: 4s;
   animation-duration: 4s;
-  -webkit-animation-name: color-change;
   animation-name: color-change;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
   animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 
 .sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
   animation: 4s color-change infinite alternate linear;
 }
 
 .cloud-front {
-  -webkit-animation-duration: 30s;
   animation-duration: 30s;
-  -webkit-animation-name: cloud-move;
   animation-name: cloud-move;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
   animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 
 .cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
   animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
-@-webkit-keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
 }
 
 @keyframes color-change {
@@ -514,52 +391,26 @@ button {
   }
 }
 
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
-  }
-}
-
 @keyframes cloud-move {
   from {
-    -webkit-transform: translate(0, 50px);
     transform: translate(0, 50px);
   }
   to {
-    -webkit-transform: translate(200px, 50px);
     transform: translate(200px, 50px);
-  }
-}
-
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(446px, 48px);
     transform: translate(446px, 48px);
   }
   to {
-    -webkit-transform: translate(100px, 48px);
     transform: translate(100px, 48px);
   }
 }
 
 .footer-line {
-  width: 50%;
+  width: var(--fity-percent);
   height: 0.5px;
   border-width: 0px;
   background-color: #808080;
@@ -572,21 +423,19 @@ button {
 
 @media all and (max-width: 500px) {
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
-    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media all and (max-width: 750px) {
   .grid {
-    grid-gap: 10px;
+    grid-gap: var(--ten-pixels);
   }
   .grid__item:last-child {
     grid-column: auto / auto;
