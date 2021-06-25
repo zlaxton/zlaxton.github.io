@@ -89,7 +89,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: var(--ten-pixels);
+  grid-row-gap: var(--ten-pixels);
+  grid-column-gap: var(--ten-pixels) ;
   padding: var(--ten-pixels);
 }
 
