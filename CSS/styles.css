@@ -87,8 +87,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px;
   row-gap: var(--ten-pixels);
   column-gap: var(--ten-pixels) ;
   padding: var(--ten-pixels);
