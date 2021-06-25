@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -408,6 +415,10 @@ button {
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   margin: 0 auto;
 }
 
