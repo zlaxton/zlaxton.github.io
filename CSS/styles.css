@@ -146,17 +146,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-left: 15px;
 }
 
-.page-footer {
-  clear: both;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  display: flexbox;
-  flex-flow: row nowrap;
-}
-
 .flex-container {
   display: flex;
   flex-flow: column wrap;
@@ -316,6 +305,17 @@ button {
 .page-content {
   margin: 0 auto 30px auto;
   text-align: center;
+}
+
+.page-footer {
+  clear: both;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display:flex;
+  flex-flow: row nowrap;
 }
 
 #about {
