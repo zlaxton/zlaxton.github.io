@@ -84,7 +84,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   min-height: auto;
   margin: 0;
 }
- 
+
 .grid {
   display: grid;
   grid-template-columns: 300px 300px 300px;
